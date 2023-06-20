@@ -1,0 +1,141 @@
+.zones {
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 400px;
+		height: 395px;
+		left: -38px;
+		top: -107px;
+		background: no-repeat center url("../img/zones/head.png");
+		z-index: 2;
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		left: -458px;
+		top: -193px;
+		width: 2400px;
+		height: 1573px;
+		background: no-repeat center url("../img/zones/background.png");
+	}
+	&__top {
+		position: absolute;
+		top: -700px;
+		right: -10px;
+	}
+	&__elevator {
+		position: absolute;
+		top: 48px;
+		right: -7px;
+		z-index: 50;
+	}
+	&__content {
+		position: relative;
+		z-index: 100;
+	}
+	&__title {
+		max-width: 400px;
+		font-size: 64px;
+		line-height: 70px;
+		letter-spacing: -1px;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 140px;
+	}
+	&__items {
+		display: flex;
+	}
+	&__col:not(:last-child) {
+		margin-right: 217px;
+	}
+	&__col:last-child {
+		margin-top: 1133px;
+	}
+	&__item {
+		margin-bottom: 140px;
+	}
+	&__name {
+		margin: 0;
+		margin-bottom: 40px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 143%;
+		color: #000000;
+	}
+	@media (max-width: 1200px) {
+		&__elevator {
+			top: 202px;
+			right: -145px;
+		}
+		&__col:not(:last-child) {
+			margin-right: 90px;
+		}
+		&__item {
+			margin-bottom: 115px;
+		}
+	}
+	@media (max-width: 992px) {
+		&__items {
+			display: grid;
+			gap: 60px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		&__col:not(:last-child) {
+			margin-right: 0px;
+		}
+		&__photo {
+			width: 100%;
+			object-fit: cover;
+		}
+		&__item {
+			margin-bottom: 70px;
+		}
+		&::before {
+			display: none;
+		}
+		&__elevator {
+			top: 220px;
+			right: -276px;
+		}
+	}
+	@media (max-width: 768px) {
+		&__title {
+			font-size: 40px;
+			line-height: 40px;
+			margin-bottom: 50px;
+		}
+		&__items {
+			gap: 40px;
+		}
+		&__name {
+			font-size: 17px;
+			margin-bottom: 25px;
+		}
+	}
+	@media (max-width: 480px) {
+		&__title {
+			font-size: 32px;
+			line-height: 35px;
+		}
+		&__elevator {
+			display: none;
+		}
+		&__col:last-child {
+			margin-top: 0px;
+		}
+		&__items {
+			gap: 20px;
+		}
+	}
+	@media (max-width: 425px) {
+		&__item {
+			margin-bottom: 35px;
+		}
+		&__name {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+	}
+}

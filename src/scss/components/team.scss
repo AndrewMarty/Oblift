@@ -1,0 +1,143 @@
+.team {
+	position: relative;
+	padding: 284px 0 90px;
+	&__content {
+		position: relative;
+		z-index: 1;
+	}
+	&__top {
+		position: absolute;
+		right: 0;
+		// top: -225px;
+		bottom: 50%;
+	}
+	&__blank {
+		position: absolute;
+		bottom: -201px;
+		right: -12px;
+	}
+	&__bottom {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		bottom: 0;
+		// bottom: 0;
+	}
+	&__folder {
+		top: -133px;
+		left: -9px;
+		position: absolute;
+	}
+	&__row {
+		justify-content: center;
+		margin: -39px -10px;
+		flex-wrap: wrap;
+		display: flex;
+	}
+	&__item {
+		border-radius: 20px;
+		overflow: hidden;
+		width: calc(33% - 20px);
+		margin: 39px 10px;
+		background: #ffffff;
+		box-shadow: -18px 18px 36px rgba(230, 230, 230, 0.2),
+			18px -18px 36px rgba(230, 230, 230, 0.2),
+			-18px -18px 36px rgba(255, 255, 255, 0.9),
+			18px 18px 45px rgba(230, 230, 230, 0.9),
+			inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+			inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+	}
+	&__inner {
+		padding: 35px 50px 55px;
+	}
+	&__photo {
+		width: 100%;
+		display: block;
+	}
+	&__prof {
+		display: block;
+		font-weight: 300;
+		font-size: 20px;
+		color: $orange;
+		margin-bottom: 12px;
+	}
+	&__name {
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 30px;
+		letter-spacing: -1px;
+		color: #000000;
+		margin-bottom: 9px;
+	}
+	&__desc {
+		color: #000000;
+		margin: 0;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	@media (max-width: 1200px) {
+		&__inner {
+			padding: 30px 40px 55px;
+		}
+		&__name {
+			font-size: 21px;
+		}
+		&__desc {
+			font-size: 16px;
+		}
+	}
+	@media (max-width: 1200px) {
+		&__inner {
+			padding: 30px 30px 40px;
+		}
+		&__blank {
+			right: -185px;
+		}
+	}
+	@media (max-width: 768px) {
+		padding-top: 200px;
+		&__prof {
+			font-size: 15px;
+		}
+		&__name {
+			font-size: 17px;
+			line-height: 21px;
+		}
+		&__desc {
+			font-size: 12px;
+			line-height: 17px;
+		}
+		&__row {
+			margin: -20px -10px;
+		}
+		&__item {
+			margin: 30px 10px;
+		}
+	}
+	@media (max-width: 480px) {
+		&__row {
+			margin: -20px -5px;
+		}
+		&__item {
+			width: calc(50% - 10px);
+			margin: 20px 5px;
+		}
+		&__blank {
+			display: none;
+		}
+	}
+	@media (max-width: 425px) {
+		&__row {
+			margin: 0;
+			display: grid;
+			gap: 30px;
+			grid-template-columns: 1fr;
+		}
+		&__item {
+			width: 85%;
+			margin: 0 auto;
+		}
+	}
+}
